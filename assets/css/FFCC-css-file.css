@@ -1,0 +1,162 @@
+@font-face{
+    font-family: myFirstFont;
+    src: url(Abel-Regular.ttf)
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: teal;
+}
+
+h1{
+    font-family: myFirstFont;
+    color: aliceblue;
+    padding-left: 5%;
+    font-weight: lighter;
+    padding:20px 0 20px 20px;
+    font-size: 30px;
+}
+
+h2{
+    position: relative;
+    background-color:rgba(222, 233, 241, 0.69);
+    margin-top: 0;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    z-index: 2;
+    font-family: myFirstFont;
+}
+
+
+.title{
+    background-image: url(https://image.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg);
+    margin-bottom: 0;
+    border-style: none;
+    padding: 5px 0px 5px 0;
+    background-size: cover;
+    box-shadow: 5px 5px 50px black;
+    z-index: 4;
+}
+
+.main-body{
+    margin: 0 100px 0 100px;
+    background-color: white;
+    box-shadow: 10px 10px 50px black;
+}
+
+.flex{
+    display: flex;
+}
+
+input[type="radio"]{
+    -webkit-appearance: none;
+}
+
+label.morn, label.even{
+    height: 300px;
+    width: 500px;
+    border: none;
+    position: relative;
+    margin: auto;
+    filter: grayscale(100%) blur(5px);
+}
+
+label.morn{
+    margin-left: 200px;
+}
+
+label.even{
+    margin-right: 200px;
+}
+
+.fa{
+    width: 500px;
+    height: 300px;
+}
+
+label>span{
+    position: absolute;
+    font-size: 0;
+    font-family: myFirstFont;
+    bottom: 5%;
+    right: 35%;
+    visibility: hidden;
+    z-index: 3;
+    
+}
+
+input[type="radio"]:hover + label>span,input[type="radio"]:hover + label{
+    filter: grayscale(100%) blur(0px);
+    color:grey;
+    visibility: visible;
+    font-size: 50px;
+    transition: 500ms;
+}
+
+input[type="radio"]:checked + label>span, input[type="radio"]:checked + label{
+    filter: grayscale(0%) blur(0px);
+    color: yellow;
+    font-size: 50px;
+    visibility: initial;
+    transition: 250ms;
+    box-shadow: 10px 10px 30px black;
+}
+
+input[type="radio"]:checked + label>span{
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.slot{
+    border-style: solid;
+    padding: 0;
+    width: 1500px;
+    
+    position: relative;
+}
+
+img.morning, img.evening{
+    float: initial;
+    margin-top: 0;
+    width: 748px;
+    padding: 0;
+    margin: auto;
+    filter: grayscale(100%) blur(5px);
+}
+
+img.morning:hover, img.evening:hover{
+    filter: grayscale(10%) blur(1px);
+}
+
+.test{
+    border-style: solid;
+    border-color: gray;
+}*/
+
+/*.morning-button{
+    position: absolute;
+    border-style: solid;
+    top: 50%;
+    right: 800px;
+    padding: 50px 2px 50px 100px;
+}
+
+img.morning:hover .morning-button{
+    border-style: ridge;
+}*/
