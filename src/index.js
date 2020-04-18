@@ -28,7 +28,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
           code =req.params.code
         db.collection('user').find({ CODE: code }).toArray((error, result) => {
             res.send(result)
-            
+           
         })
     })
     app.patch('/time',(req,res)=>{
@@ -52,7 +52,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
         })
         if(flag===1){
             app.get('/time',async(req,res)=>{
-                db.collection('user').find({FACULTY:result[0].FACULTY,CODE:result[0].CODE,SLOT:{$regex:/^L3[0-9]|^L4[0-9]|^L5[[0-9]/}}).toArray((error,result)=>{
+                db.collection('user').find({FACULTY:name,CODE:code,SLOT:{$regex:/^L3[0-9]|^L4[0-9]|^L5[[0-9]/}}).toArray((error,result)=>{
                     console.log(result)
                     res.send(result)
                 })
@@ -61,7 +61,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
         }
         else{
             app.get('/time',async(req,res)=>{
-                db.collection('user').find({FACULTY:result[0].FACULTY,CODE:result[0].CODE,SLOT:{$regex:/^L[0-9]|^L1[0-9]|^L2[0-9]/}}).toArray((error,result)=>{
+                db.collection('user').find({FACULTY:name,CODE:code,SLOT:{$regex:/^L[0-9]|^L1[0-9]|^L2[0-9]/}}).toArray((error,result)=>{
                     console.log(result)
                     res.send(result)
                 })
