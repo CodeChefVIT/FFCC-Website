@@ -2,10 +2,11 @@ const express = require('express')
 var async = require('async');
 const { MongoClient, ObjectID } = require('mongodb')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 const mongoose = require('mongoose')
 app.use(express.json())
 const data = require('./dataReviews')
+
 
 
 console.log(data.length)
@@ -13,12 +14,12 @@ console.log(data.length)
 
 // DataBase Config
 // const db = require('./config/keys').mongoURI;
-const connectionURL = 'mongodb+srv://jugalbhatt123:Panujugu123@cluster0-cmlwg.mongodb.net/test?retryWrites=true&w=majority'
+const connectionURL = process.env.DBURL
 const databaseName = "TEST"
 
 
 // Connect to MongoDB
-MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) => {
+MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
     if (error) {
         return console.log('Unable to connect to database!')
     }
