@@ -41,9 +41,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
                
     })
     app.get('/time',async (req,res)=>{
-        name = req.query.name
-        code = req.query.code
-        if(req.query.sort==='morn'){
+        name = req.body.name
+        code = req.body.code
+        if(req.body.sort==='morn'){
             flag =1
         }
         else{
