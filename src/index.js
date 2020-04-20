@@ -28,9 +28,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
   
       console.log('MongoDB Connected')
 
-    app.get('/time/:code',async(req,res)=>{
-          code =req.params.code
-        db.collection('user').find({ CODE: code }).toArray((error, result) => {
+    app.get('/time',async(req,res)=>{
+            code = req.body.code
+            db.collection('user').find({ CODE: code }).toArray((error, result) => {
             res.send(result)
            
         })
