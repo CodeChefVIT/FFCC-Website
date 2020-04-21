@@ -87,13 +87,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     })
 
-    app.get('/time/teacher',async(req,res)=>{
-        
-        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).toArray((error, result) => {
-        res.send(result)
-       
-    })
-})
+    
 
     
 
