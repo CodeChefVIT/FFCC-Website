@@ -40,14 +40,24 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
             res.send()
                
     })
+    app.get('/time/getLabs',async(req,res)=>{
+        
+        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).toArray((error, result) => {
+        res.send(result)
+       
+    })
+})
     app.get('/time/teacher',async (req,res)=>{
         name = req.body.name
         code = req.body.code
         if(req.body.sort==='morn'){
             flag =1
         }
-        else{
+        else if (req.body.sort==='eve'){
             flag =0
+        }
+        else{
+            throw new Error('Enter a valid sort Parameter')
         }
         db.collection('user').find({FACULTY:name,CODE:code,Flag:flag}).toArray((error,result)=>{
             res.send(result)
@@ -77,14 +87,24 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     })
 
+    app.get('/time/teacher',async(req,res)=>{
+        
+        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).toArray((error, result) => {
+        res.send(result)
+       
+    })
+})
+
     
 
-    async.eachSeries(data, function updateObject (obj, done) {
-        // Model.update(condition, doc, callback)
-        db.collection('user').updateMany({ FACULTY: obj.NAME }, { $set : { REVIEW: obj.RATINGS }}, done);
-    }, function allDone (err) {
-        // this will be called when all the updates are done or an error occurred during the iteration
-    });
+    app.patch('/time/updateReviews',async (req,res)=>{
+        async.eachSeries(data, function updateObject (obj, done) {
+            // Model.update(condition, doc, callback)
+            db.collection('user').updateMany({ FACULTY: obj.NAME }, { $set : { REVIEW: obj.RATINGS }}, done);
+        }, function allDone (err) {
+            // this will be called when all the updates are done or an error occurred during the iteration
+        });
+    })
 
     
     // mr = db.runCommand({
