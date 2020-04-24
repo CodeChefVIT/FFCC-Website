@@ -25,7 +25,7 @@ body{
     box-shadow: 5px 30px 50px #333;
 
 }
-.container {
+.contain {
     position: relative;
     width: 50%;
     
@@ -43,20 +43,23 @@ body{
   .middle {
     transition: .5s ease;
     opacity: 0;
+    
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
   
-  .container:hover .image {
+  .contain:hover .image {
     opacity: 0.3;
   }
   
-  .container:hover .middle {
+  .contain:hover .middle {
     opacity: 1;
+    justify-content: center;
+    box-shadow: 5px 5px 5px black;
   }
   .img-fluid:hover{
     filter: blur(1px);
