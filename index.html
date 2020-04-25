@@ -1,36 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link type="text/css" rel="stylesheet" href = "assets/css/FFCC-css-file.css">
-    
-    <link type="text/css" rel="stylesheet" href = "Abel-Regular.ttf">
+<html>
+    <head>
+        <title>FFCC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../FFCC-Website/assets/css/FFCC-css-file.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+        <style>
+            .navbar{
+                background-color: #83CACC;
+            }
+            .navbar a{
+                color: black!important;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md">
+                
+                <a class="navbar-brand" href="index.html">
+                    <span>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="title">
-        <h1>Welcome <br>To Your Fully Flexible Credit Companion. </h1>
-    </div>
+                        <span class="d-inline d-md-none" style="font-family: 'Lato', sans-serif;font-size: medium;">FULLY FLEXIBLE <br> CREDIT COMPANION(FFCC)</span> 
 
-<div class="main-body">
-    <h2>Hover over to choose theory slot</h2>
-    
-    <div class="flex">
+                        <span class="d-none d-md-inline" style="font-family: 'Lato', sans-serif;">FULLY FLEXIBLE CREDIT COMPANION(FFCC)</span>
+                    </span>
+                </a>
+                <!-- Navbar-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-none d-sm-inline">
+                        <a class="navbar-brand text-center" href="index.html"><img src="../FFCC-Website/assets/img/assets/cc logo black.png" width="100px"></a>
+                    </li>
+                    <li class="nav-item d-inline d-sm-none">
+                        <a class="navbar-brand text-center" href="index.html"><img src="../FFCC-Website/assets/img/assets/mascot.png" width="25px"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container-fluid" style=" background-color: rgb(226, 227, 228); width: 80%;">
+            <h2 class="First-page" style="color: black;font-family: 'Lato', sans-serif;">Please choose your preferred theory slot</h2>
+            <div class="row justify-content-center">  
+              <div class="col-12 col-md-5 mx-2 p-5 contain ">
+                <a href="#"><img src="../FFCC-Website/assets/img/assets/Morning-main.png" class="img-fluid" name="slots-pic" width="350px" style="box-shadow: 5px 10px 10px #333;border-radius: 10px;"/>
+                <div class="middle">
+                    <div class="text">Morning</div>
+                </div></a>
+              </div>
+              
+              <div class="col-12 col-md-5 mx-2 p-5 contain">
+                <a href="#"><img src="../FFCC-Website/assets/img/assets/evening-main.png" class="img-fluid" name="slots-pic" width="350px" style="box-shadow: 5px 10px 10px #333;border-radius: 10px;"/>
+                <div class="middle">
+                    <div class="text">Evening</div>
+                </div></a>
+              </div>
+            </div>
+        <!-- <div class="row justify-content-center">
+            <div class="col-md-6"><img src="assets/images.jpg" height="220" /></div>
 
-        <input type="radio" name="morning" id = "morning"> 
-            <label for="morning" class="morn">
-                <span>Morning</span>
-                <img class = "fa fa-money" src="assets/img/Capture.JPG">
-            </label>
-
-        <input type="radio" name="morning" id = "evening"> 
-            <label for="evening" class="even">
-                <span>Evening</span>
-                <img src="assets/img/evening.jpg" class="fa fa-cash">
-            </label>
-    </div>
-</div>
-</body>
+            <div class="col-9"><img src="assets/images.jpg" height="220" /></div>
+        </div> -->
+    </body>
 </html>
