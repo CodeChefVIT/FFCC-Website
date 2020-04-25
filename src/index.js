@@ -36,22 +36,16 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         })
     })
 
-    app.get('time/app/:code',async(req,res)=>{
-        if(!req.code){
+    app.get('/time/app/:code',async(req,res)=>{
+        if(!req.params.code){
             throw new Error('Enter subject code')
         }
-        db.collection('user').find({CODE:code}).toArray((error,result)=>{
+        db.collection('user').find({CODE:req.params.code}).toArray((error,result)=>{
             res.send(result)
         })
     })
 
-    app.get('/time/app/getLabs',async(req,res)=>{
-        
-        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).toArray((error, result) => {
-        res.send(result)
-       
-    })
-})
+    
 
     app.patch('/time',(req,res)=>{
         db.collection('user').updateMany({},{$set:{"REVIEW":0}})
