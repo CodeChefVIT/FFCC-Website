@@ -1,0 +1,9 @@
+.navbar{
+    
+    background-image: url(../img/assets/bg-1.jpg);
+    /* background-color: rgb(129, 204, 230); */
+    box-shadow: 5px 30px 50px rgb(170, 145, 145);
+  }
+  .navbar a{
+      color: black!important;
+  }
