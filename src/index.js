@@ -30,19 +30,33 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     app.get('/time',async(req,res)=>{
             code = req.body.code
-            db.collection('user').find({ CODE: code }).toArray((error, result) => {
+            var mysort = {REVIEW:-1}
+            db.collection('user').find({ CODE: code }).sort(mysort).toArray((error, result) => {
             res.send(result)
            
         })
     })
+
+    app.get('/time/app/:code',async(req,res)=>{
+        if(!req.params.code){
+            throw new Error('Enter subject code')
+        }
+            var mysort = {REVIEW:-1}
+            db.collection('user').find({ CODE: req.params.code }).sort(mysort).toArray((error, result) => {
+            res.send(result)
+        })
+    })
+
+    
+
     app.patch('/time',(req,res)=>{
         db.collection('user').updateMany({},{$set:{"REVIEW":0}})
             res.send()
                
     })
     app.get('/time/getLabs',async(req,res)=>{
-        
-        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).toArray((error, result) => {
+        var mysort = {REVIEW:-1}
+        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).sort(mysort).toArray((error, result) => {
         res.send(result)
        
     })
@@ -87,13 +101,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     })
 
-    app.get('/time/teacher',async(req,res)=>{
-        
-        db.collection('user').find({ TYPE:"ELA",FACULTY:req.body.name,CODE:req.body.code}).toArray((error, result) => {
-        res.send(result)
-       
-    })
-})
+    
 
     
 
@@ -106,6 +114,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         });
     })
 
+    
+
+    
     
     // mr = db.runCommand({
     //     "mapreduce": "user",
