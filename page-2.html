@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: rgb(171, 174, 177);">
 
     <!-- Navbar -->
 
@@ -37,30 +37,51 @@
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item d-none d-sm-inline">
-                <a class="navbar-brand text-center" href="index.html"><img src="../FFCC-Website/assets/img/assets/cc logo black.png" width="100px"></a>
+                <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/cc logo black.png" width="100px"></a>
             </li>
             <li class="nav-item d-inline d-sm-none">
-                <a class="navbar-brand text-center" href="index.html"><img src="../FFCC-Website/assets/img/assets/mascot.png" width="25px"></a>
+                <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/mascot.png" width="25px"></a>
             </li>
         </ul>
+
+        <!--<ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-none d-sm-inline">
+                        <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/cc logo black.png" width="100px"></a>
+                    </li>
+                    <li class="nav-item d-inline d-sm-none">
+                        <a class="navbar-brand text-center" href="index.html"><img src="/assets/img/assets/mascot.png" width="25px"></a>
+                    </li>
+                </ul>-->
     </nav>
     <br>
+
+         
 
     
     <div class="row">
         <!-- Credit Counter -->
-        <div class="col-md-2" style="border-style: none;"> Total creds</div>
+        <div class="col-md-2" > Total creds</div>
 
         <!-- Form -->
-        <div class="col-7" style="border-style: none;"> 
+        <div class="col-7" style="background-color: aliceblue; border-radius: 20px;"> 
+           <br>
             <form>
+                <div class="container">
                 <div class="form-group">
+                    <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+
+                    <label for="sub-1">Enter Number of subjects</label>
+                    <input type="text" class="form-control" id="sub-1" aria-describedby="emailHelp">
+                    <small id="0" class="form-text text-muted"></small>
+                        </div>
+                    <br>
+
                     <label for="sub-1">Enter Subject Code</label>
                     <input type="text" class="form-control" id="sub-1" aria-describedby="emailHelp" placeholder="Example: CSE1002">
                     <small id="1" class="form-text text-muted">Make sure to type ONLY the subject code</small>
                   
                     <div class="row">
-                    <div class="col-4 offset-lg-5">
+                    <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
                     <label for="">Teacher Preference (upto 4)</label>
                     <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
                     <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
@@ -76,7 +97,8 @@
                     <small id="2" class="form-text text-muted">Make sure to type ONLY the subject code</small>
                     
                     <div class="row">
-                        <div class="col-4 offset-lg-5">
+                        <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+
                         <label for="">Teacher Preference (upto 4)</label>
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
@@ -92,7 +114,8 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-4 offset-lg-5">
+                        <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+
                         <label for="">Teacher Preference (upto 4)</label>
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
@@ -107,7 +130,8 @@
                     <small id="4" class="form-text text-muted">Make sure to type ONLY the subject code</small>
 
                     <div class="row">
-                        <div class="col-4 offset-lg-5">
+                        <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+
                         <label for="">Teacher Preference (upto 4)</label>
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
@@ -123,7 +147,8 @@
                     <small id="5" class="form-text text-muted">Make sure to type ONLY the subject code</small>
                     
                     <div class="row">
-                        <div class="col-4 offset-lg-5">
+                        <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+
                         <label for="">Teacher Preference (upto 4)</label>
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
@@ -139,7 +164,8 @@
                     <small id="6" class="form-text text-muted">Make sure to type ONLY the subject code</small>
                     
                     <div class="row">
-                        <div class="col-4 offset-lg-5">
+                        <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+
                         <label for="">Teacher Preference (upto 4)</label>
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
                         <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Faculty Name">
@@ -151,7 +177,7 @@
                 
                     <button type="submit" class="btn btn-primary">Submit</button>
 
-                
+                </div>
               </form>
         </div>
     </div>
