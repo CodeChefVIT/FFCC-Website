@@ -47,7 +47,13 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         })
     })
 
-    
+    app.get("/time/subjectCode",(req,res)=>{
+        db.collection('user').find({}).project({TITLE: 1,_id: 0,CODE: 1}).toArray((error,result)=>{
+            res.send(result)
+        })
+                            
+
+    })
 
     app.patch('/time',(req,res)=>{
         db.collection('user').updateMany({},{$set:{"REVIEW":0}})
@@ -154,6 +160,6 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
 
 
-app.listen(port, () => {
-    console.log('Server is up on port ' + port)
-})
+    app.listen(port, () => {
+        console.log('Server is up on port ' + port)
+    })
