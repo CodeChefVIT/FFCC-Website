@@ -49,10 +49,27 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     app.get("/time/subjectCode",(req,res)=>{
         db.collection('user').find({}).project({TITLE: 1,_id: 0,CODE: 1}).toArray((error,result)=>{
-            res.send(result)
+            const standardsList=result
+            console.log(standardsList.length)
+            // res.send(result)
+            function uniqurArray(standardsList){
+        var a = standardsList.concat();
+       for(var i=0; i<a.length; i++) {
+           for(var j=i+1; j<a.length; j++) {
+               if(a[i].CODE === a[j].CODE){
+                   a.splice(j--, 1);
+               }
+           }
+       }
+    
+       return a;
+    }
+    
+    res.send(uniqurArray(standardsList))
+    console.log(uniqurArray(standardsList).length)
+    
         })
-                            
-
+    
     })
 
     app.patch('/time',(req,res)=>{
