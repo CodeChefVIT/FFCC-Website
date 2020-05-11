@@ -34,7 +34,7 @@ function getSubject1(selectObject) {
     var value = selectObject.value;  
     var subjectcode = value.substring(0,8)
     console.log(subjectcode)
-    $('.preference-s-1').val("new value")
+    
     
     
         var xh = new XMLHttpRequest();
