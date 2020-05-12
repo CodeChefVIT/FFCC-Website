@@ -49,7 +49,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     app.get("/time/subjectCode",(req,res)=>{
         var mysort = {CODE: 1 };
-        db.collection('user').find({}).project({TITLE: 1,_id: 0,CODE: 1}).sort(mysort).toArray((error,result)=>{
+        db.collection('user').find({}).project({TITLE: 1,_id: 0,CODE: 1,CREDITS:1}).sort(mysort).toArray((error,result)=>{
             const standardsList=result
             // res.send(result)
             function uniqurArray(standardsList){
