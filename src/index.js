@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT
 const mongoose = require('mongoose')
 app.use(express.json())
+app.use(cors())
 const data = require('./dataReviews')
 
 
