@@ -1,10 +1,12 @@
 const express = require('express')
-var async = require('async');
+var async = require('async')
+var cors = require('cors')
 const { MongoClient, ObjectID } = require('mongodb')
 const app = express()
 const port = process.env.PORT
 const mongoose = require('mongoose')
 app.use(express.json())
+app.use(cors())
 const data = require('./dataReviews')
 
 
