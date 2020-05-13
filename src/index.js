@@ -11,7 +11,7 @@ const data = require('./dataReviews')
 
 
 
-console.log(data.length)
+
 
 
 // DataBase Config
@@ -142,30 +142,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     
     
-    // mr = db.runCommand({
-    //     "mapreduce": "user",
-    //     "map": function() {
-    //         var regxp = /\s/;
-    //         for (var key in this) { 
-    //             if (key.match(regxp)) {
-    //                 emit(key, null); 
-    //             }
-    //         }
-    //     },
-    //     "reduce": function() {}, 
-    //     "out": "filtered_keys"
-    // })
     
-    // db[mr.result].distinct("_id")
-    
-    // var update = { "$rename": {} };
-    // db[mr.result].distinct("_id").forEach(function (key){
-    //     update["$rename"][key] = key.replace(/\s+/g, "_");
-    // });
-    
-    // //print(update)
-    
-    // db.user.update({ }, update, false, true );
     
         
 
