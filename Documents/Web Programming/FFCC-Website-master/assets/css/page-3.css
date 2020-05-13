@@ -1,0 +1,39 @@
+.navbar{
+    
+    background-image: url(../img/assets/bg-1.jpg);
+    /* background-color: rgb(129, 204, 230); */
+    box-shadow: 5px 30px 50px rgb(170, 145, 145);
+  }
+  .navbar a{
+      color: black!important;
+  }
+  
+
+.theory{
+    background-color: rgb(204,204,255);
+}
+
+.grey-box{
+    background-color: rgb(192, 192, 192);
+}
+.grey-box:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.lab{
+    background-color: rgb(153,204,255);
+}
+
+.l-green-box{
+    background-color:  #ffffcc;
+}
+.time-table  td:hover{
+    background-color: #ccff33;
+}
+
+
+
+.jumbo-table{
+    text-align: center;
+    background-color: rgb(224, 224, 220);
+}
