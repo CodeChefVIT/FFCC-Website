@@ -1,0 +1,202 @@
+body {background-color: #F5F5F5;}
+/* Navbar */
+.nav {margin-right: 70px;}
+
+.nav-item, .navbar-brand {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.navbar-brand {
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    margin-left: 70px;
+    letter-spacing: 4px;
+}
+
+.nav-link {
+    font-family: 'Rubik', sans-serif;
+    color: rgb(182, 180, 180);
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 3px;
+}
+
+.nav-link:hover {
+    color: rgb(241, 239, 239);
+    transition: 200ms;
+}
+
+.disabled {
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+}
+
+.codechef {
+    display: inline-block;
+    width: 100px;
+    margin-left: 10px;
+    padding-left: 10px;
+    opacity: 0.5;
+}
+
+.codechef:hover {
+    opacity: 1;
+    border: none;
+    transition: 200ms;
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        width: 550px;
+        margin: auto;
+        /* margin-left: 1000px; */
+    }
+    
+    .nav-item {
+        font-size: 20px;
+        margin-right: 0px;
+        padding-left: 31px;
+    }
+    
+    .navbar-brand {
+        margin-left: 20px;
+    }
+    
+    .nav-link {
+        font-family: 'Rubik', sans-serif;
+        color: rgb(182, 180, 180);
+        letter-spacing: 2px;
+        padding-left: 0px;
+    }
+    
+    
+    
+    .disabled {
+        font-weight: 0;
+        font-size: 0;  
+    }
+
+   
+
+} 
+
+@media (max-width: 576px) {
+    .nav {
+        width: 190px;
+        margin-right: 0;
+    }
+    
+    .nav-item {
+        font-size: 20px;
+        margin-right: 0px;
+    }
+    
+    .navbar-brand {
+        font-family: 'Rubik', sans-serif;
+        font-size: 32px;
+        margin-left: 20px;
+        letter-spacing: 4px;
+    }
+    
+    .nav-link {
+        font-family: 'Rubik', sans-serif;
+        color: rgb(182, 180, 180);
+        letter-spacing: px;
+        padding-left: 0px;
+    }
+
+    .codechef {
+        margin: 0;
+        position: relative;
+        right: 10px;
+    }
+} 
+
+
+/* Carousel */
+
+.carousel-item {
+    height:400px;
+    background-color: rgb(52,58,64);
+    background-image: linear-gradient(rgb(52,58,64), rgb(26, 26, 26));
+}
+
+.item-1, .item-2, .item-3 {
+    font-family: "Montserrat", sans-serif;
+    line-height: 100px;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    color: rgb(231, 226, 226);
+}
+
+.item-3 {padding-top: 100px;}
+
+/* Section Divider 1 */
+.circle1, .circle2, .circle3 {
+    border-style: none;
+    border-radius: 100%;
+    padding: 22px 35px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+}
+
+.circle1 {
+    background-color: #ABE08B;
+    box-shadow: 0 0 0 6px rgb(231, 226, 226);
+}
+.circle2 {background-color: #E68383;}
+.circle3 {background-color: #E68383;}
+
+.line {
+    border-bottom: solid 4px rgb(231, 226, 226);
+    height: 0;
+    width: 400px;
+    position: relative;
+    top: 43px;
+    margin: 0 6px;
+}
+
+/* Slot choosing */
+
+input[type="radio"] {  -webkit-appearance: none;}      /*Hide the circle of radio button*/
+
+.slot-title, .slot-title2, .slot-title3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: rgb(95, 95, 95);
+}
+
+.slots {
+    background-color: rgb(245,245,245);
+    width: 100%;
+}
+
+.card {margin-top: 15px;}
+
+.radio-btn {
+    width: 250px;
+    background-color: rgb(123, 212, 135);
+    border-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0px 0px 10px 2px rgb(207, 207, 207);
+}
+
+.submit-btn {
+    width: 150px;
+    margin-right: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+hr {width: 70%;}
+
+
+/* FAQ */
+#faq {background-color: rgb(233,236,239);}
+
+/* Contact us */
