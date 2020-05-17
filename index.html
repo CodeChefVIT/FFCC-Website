@@ -1,67 +1,164 @@
 
-<html>
-    <head>
-        <title>FFCC</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="icon" href="assets/img/assets/mascot-white.jpg" type="image/x-icon" />
-        <link rel="stylesheet" href="assets/css/FFCC-css-file.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
-        <style>
-            .navbar{
-                background-color: #83CACC;
-            }
-            .navbar a{
-                color: black!important;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-md">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap --> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- CSS --> 
+    <link rel="stylesheet" href = "assets/css/page-1.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://use.fontawesome.com/630e118e72.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- FFCC LOGO -->
+        <span class="navbar-brand"> FFCC </span>   
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <!-- Menu -->
+        <div class = "collapse navbar-collapse navbar-md-expand div-nav" id="navbarToggler">
+        <ul class="nav ml-auto ">
+            <li class="nav-item">
+              <a class="nav-link active" href="#faq">FAQ</a>    <!--FAQ-->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>   <!--Contact us-->
+            </li>
+            
+            <li class="nav-item">
+                <a class="" href="#"><img class="codechef" src="assets/img/ccwhite.png"></a>   <!--Codechef LOGO-->
+            </li>
+        </ul>
+        </div>
+    </nav>
+    
+
+    <!-- Carousel -->
+    <div id="carouselSlides" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <!-- Carousel Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselSlides" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselSlides" data-slide-to="1"></li>
+            <li data-target="#carouselSlides" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <div class="carousel-item item-1 active ">
+              <span>Welcome</span><br>
+              <span>To Fully Flexible Credit Companion.</span>
+          </div>
+          <div class="carousel-item item-2">
+            <span>Automate Your Timetable.</span><br>
+            <span>Get Started Below.</span>
+          </div>
+          <div class="carousel-item item-3">
+              <span>Using your phone?</span>
+              <span><button type="button" class="btn btn-light">Download<img src="https://img.icons8.com/material-sharp/24/000000/google-play.png"/></button></span>
+          </div>
+        </div>
+
+    </div>
+    
+    <br><br>
+
+    <!-- Section divider 1 -->
+    <div class = "container d-flex justify-content-center section1">
+        <span class = "circle1">1</span> 
+        <span class = "line"></span> 
+        <span class = "circle2">2</span>
+        <span class = "line"></span>
+        <span class = "circle3">3</span>
+    </div>
+
+    <br><br>
+
+    <!-- Morning/Noon Slot Choosing -->
+        <h1 class="slot-title">Choose Your Theory Slot</h1>
+        <br>
+        <hr>
+        <br>
+            <div class="btn-group btn-group-toggle row justify-content-center slots" data-toggle="buttons">
                 
-                <a class="navbar-brand" href="index.html">
-                    <span>
+                    <!-- Morning Card -->
+                    <div class="col-sm-auto ">
+                        <div class="card text-center card1" style="width: 18rem;">
+                            <img src="assets/img/morning2.PNG" class="card-img-top morning" alt="...">
+                            <div class="card-body">
 
-                        <span class="d-inline d-md-none" style="font-family: 'Lato', sans-serif;font-size: medium;">FULLY FLEXIBLE <br> CREDIT COMPANION(FFCC)</span> 
+                                <h5 class="card-title"></h5> <!--Optional text-->
+                                <p class="card-text"></p>     
 
-                        <span class="d-none d-md-inline" style="font-family: 'Lato', sans-serif;">FULLY FLEXIBLE CREDIT COMPANION(FFCC)</span>
-                    </span>
-                </a>
-                <!-- Navbar-->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-none d-sm-inline">
-                        <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/cc logo black.png" width="100px"></a>
-                    </li>
-                    <li class="nav-item d-inline d-sm-none">
-                        <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/mascot.png" width="25px"></a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div class="container-fluid mb-5" style=" background-color: rgb(226, 227, 228); width: 80%;">
-            <h2 class="First-page" style="color: black;font-family: 'Lato', sans-serif;">Please choose your preferred theory slot</h2>
-            <div class="row justify-content-center">  
-              <div class="col-12 col-md-5 mx-2 p-5 contain ">
-                <a href="page-2.html"><img src="assets/img/assets/Morning-main.png" class="img-fluid" name="slots-pic" width="350px" style="box-shadow: 5px 10px 10px #333;border-radius: 10px;"/>
-                <div class="middle">
-                    <div class="text">Morning</div>
-                </div></a>
-              </div>
-              
-              <div class="col-12 col-md-5 mx-2 p-5 contain">
-                <a href="page-2.html"><img src="assets/img/assets/evening-main.png" class="img-fluid" name="slots-pic" width="350px" style="box-shadow: 5px 10px 10px #333;border-radius: 10px;"/>
-                <div class="middle">
-                    <div class="text">Evening</div>
-                </div></a>
-              </div>
+                                <label class="btn btn-secondary radio-btn">
+                                    <input type="radio" name="options" id="morn"> Morning
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evening Card -->
+                    <div class="col-sm-auto">
+                        <div class="card text-center card2" style="width: 18rem;">
+                            <img src="assets/img/evening2.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <h5 class="card-title"></h5> <!--Optional text-->
+                                <p class="card-text"></p>    
+                                
+                                <label class="btn btn-secondary radio-btn">
+                                    <input type="radio" name="options" id="even"> Evening
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
-        <!-- <div class="row justify-content-center">
-            <div class="col-md-6"><img src="assets/images.jpg" height="220" /></div>
 
-            <div class="col-9"><img src="assets/images.jpg" height="220" /></div>
-        </div> -->
-    </body>
+    <br><br>
+
+    <div class="container d-flex justify-content-center">
+        <a href="page-2.html"><button class="btn btn-primary submit-btn" type="submit">Submit</button></a>
+    </div>
+
+    <br><hr><br>
+
+    <!-- FAQ Section -->
+    <section id="faq" >
+        <div class = "faq-section">
+            <h1 class = "slot-title2">FAQ</h1>
+            <br><br><br><br>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+        <div class = "contact-section">
+            <h1 class = "slot-title3">Contact Us</h1>
+        </div>
+    </section>
+</body>
 
 </html>
