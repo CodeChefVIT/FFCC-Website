@@ -1,0 +1,27 @@
+.navbar{
+    
+    background-image: url(../img/assets/bg-1.jpg);
+    /* background-color: rgb(129, 204, 230); */
+    box-shadow: 0px 70px 5px rgb(158, 153, 153);
+  }
+  .navbar a{
+      color: black!important;
+  }
+
+  .back {
+      background-color: rgb(158, 153, 153);
+  }
+
+  .subject-form {
+    color: white;
+    padding: 5px 0;
+    border-radius: 20px;
+    background-color: rgb(58, 61, 65); 
+    width: 100%;
+    box-shadow: black;
+    box-shadow: 15px 15px 30px #888888;
+  }
+
+  .submit-button {
+      margin: auto;
+  }
