@@ -92,7 +92,7 @@ function getSubject1(selectObject) {
                     xh1.onload = function () {
                         var labs = JSON.parse(this.response)
                         console.log('lab length:' + labs.length)
-                        credits += labs[1].CREDITS
+                        credits += labs[0].CREDITS
                         console.log(' after lab credits ' + credits)
                     }
                     var xh2 = new XMLHttpRequest();
@@ -106,7 +106,7 @@ function getSubject1(selectObject) {
                     xh2.onload = function () {
                         var projects = JSON.parse(this.response)
                         console.log('lab length:' + projects.length)
-                        credits += projects[1].CREDITS
+                        credits += projects[0].CREDITS
                         console.log('after project credits ' + credits)
                     }
                     
@@ -149,7 +149,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -163,7 +163,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                         console.log('DONE!')
@@ -239,7 +239,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -253,7 +253,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -290,7 +290,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -304,7 +304,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -375,7 +375,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -389,7 +389,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -425,7 +425,7 @@ function getSubject1(selectObject) {
                 xh1.onload = function () {
                     var labs = JSON.parse(this.response)
                     console.log('lab length:' + labs.length)
-                    credits += labs[1].CREDITS
+                    credits += labs[0].CREDITS
                     console.log(' after lab credits ' + credits)
                 }
                 var xh2 = new XMLHttpRequest();
@@ -439,7 +439,7 @@ function getSubject1(selectObject) {
                 xh2.onload = function () {
                     var projects = JSON.parse(this.response)
                     console.log('lab length:' + projects.length)
-                    credits += projects[1].CREDITS
+                    credits += projects[0].CREDITS
                     console.log('after project credits ' + credits)
                 }
                 console.log('DONE!')
@@ -509,7 +509,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -523,7 +523,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -560,7 +560,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -574,7 +574,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -644,7 +644,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -658,7 +658,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -695,7 +695,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -709,7 +709,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -779,7 +779,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -793,7 +793,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -830,7 +830,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -844,7 +844,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -915,7 +915,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -929,7 +929,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -966,7 +966,7 @@ function getSubject1(selectObject) {
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
                             console.log('lab length:' + labs.length)
-                            credits += labs[1].CREDITS
+                            credits += labs[0].CREDITS
                             console.log(' after lab credits ' + credits)
                         }
                         var xh2 = new XMLHttpRequest();
@@ -980,7 +980,7 @@ function getSubject1(selectObject) {
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
                             console.log('lab length:' + projects.length)
-                            credits += projects[1].CREDITS
+                            credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
                         }
                 console.log('DONE!')
@@ -1004,4 +1004,3 @@ function getSubject1(selectObject) {
             }
         }  
   }
-  
