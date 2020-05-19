@@ -1,14 +1,74 @@
-// if(document.getElementById('#morn').checked==true){
-//     console.log('morning')
-//     var slot = 'morning'
-// }else if(document.getElementById('#even').checked==true){
-//     var slot = 'evening'
-// }else{
-//     console.log('none')
-// }
+// var slot = 'one'
+// console.log(slot)
 
-var slot = "evening"
-var credits = 0
+// function checkSlot(){
+//     // if(document.getElementById('#morn').checked==true){
+//     //     console.log('morning')
+//     //      slot = 'morning'
+//     // }else if(document.getElementById('#even').checked==true){
+//     //      slot = 'evening'
+//     // }else{
+//     //     console.log('none')
+//     // }
+//     // console.log(slot)
+//     // return slot;
+// }
+//     $('#morn').click(function () {
+//         if ($('#morn').is(':checked')) {
+//            console.log("yes");
+//         }
+//         if ($('#even').is(':checked')) {
+//             console.log("no");
+//         }
+//     });
+//     $('#even').click(function () {
+//         if ($('#even').is(':checked')) {
+//             console.log("no");
+//         }
+//         if ($('#morn').is(':checked')) {
+//             console.log("yes");
+//         }
+//     });
+
+var options = document.getElementsByName('options');
+console.log(options)
+
+function slotCh(){
+    var slot;
+    
+    for(var i = 0; i < options.length; i++){
+        if(options[i].checked){
+            
+            slot = options[i].value;
+            console.log(slot)
+        }
+    }
+    console.log(slot)
+    return slot;
+}
+
+function hello(){
+    window.location.href = "page-2.html?slot=" + slotCh()
+    console.log(window.location.href)
+}
+
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+
+
+// var slot = "evening"
+// var credits = 0
 
 function populateDropdown() {
     
@@ -47,6 +107,7 @@ function populateDropdown() {
 
 
 function getSubject1(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits)
@@ -195,6 +256,7 @@ function getSubject1(selectObject) {
   
 
   function getSubject2(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits)
@@ -331,6 +393,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject3(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits)
@@ -465,6 +528,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject4(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits)
@@ -600,6 +664,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject5(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value; 
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits) 
@@ -735,6 +800,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject6(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value;
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits)  
@@ -871,6 +937,7 @@ function getSubject1(selectObject) {
 
 
   function getSubject7(selectObject) {
+    var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
     console.log(credits)
