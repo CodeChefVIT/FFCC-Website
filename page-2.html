@@ -3,7 +3,10 @@
 <head>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style-2.css">
+    <link rel="stylesheet" href="assets/css/page-2.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+
 
     <!-- Bootstrap --> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,10 +22,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     
-    <script src="assets/js/page-2.js"></script>
-    <link rel="stylesheet" href="../FFCC-Website/assets/css/page-2.css">
+    <!-- <script src="assets/js/page-2.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="icon" href="../FFCC-Website/assets/img/assets/mascot-white.jpg" type="image/x-icon" />
+    
+
+
+
+    <!-- Test -->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+    
+
+
+
+
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FFCC</title>
@@ -30,44 +46,86 @@
 <body onload="populateDropdown()" style="background-color: rgb(171, 174, 177);">
 
     <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- FFCC LOGO -->
+        <span class="navbar-brand"> FFCC </span>   
 
-    <nav class="navbar navbar-expand-md">
-                
-        <a class="navbar-brand" href="index.html">
-            <span>
-                <span class="d-inline d-md-none" style="font-family: 'Lato', sans-serif;font-size: medium;">FULLY FLEXIBLE <br> CREDIT COMPANION(FFCC)</span> 
-                <span class="d-none d-md-inline" style="font-family: 'Lato', sans-serif;">FULLY FLEXIBLE CREDIT COMPANION(FFCC)</span>
-            </span>
-        </a>
-        <!-- Navbar-->
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item d-none d-sm-inline">
-                <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/cc logo black.png" width="100px"></a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <!-- Menu -->
+        <div class = "collapse navbar-collapse navbar-md-expand div-nav" id="navbarToggler">
+        <ul class="nav ml-auto ">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>    <!--FAQ-->
             </li>
-            <li class="nav-item d-inline d-sm-none">
-                <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/mascot.png" width="25px"></a>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>   <!--Contact us-->
+            </li>
+            
+            <li class="nav-item">
+                <a class="" href="#"><img class="codechef" src="assets/img/ccwhite.png"></a>   <!--Codechef LOGO-->
             </li>
         </ul>
-
-        <!--<ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-none d-sm-inline">
-                        <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/cc logo black.png" width="100px"></a>
-                    </li>
-                    <li class="nav-item d-inline d-sm-none">
-                        <a class="navbar-brand text-center" href="index.html"><img src="/assets/img/assets/mascot.png" width="25px"></a>
-                    </li>
-                </ul>-->
+        </div>
     </nav>
     <br>
 
          
 
-    
-    <div class="row">
-        <!-- Credit Counter -->
-        <div class="col-md-2" > Total creds</div>
+    <div id="page">
+        <h1>Input Data</h1>
+        <form class="pure-form pure-form-stacked">
+            <fieldset>
+                
+                <div class="isiaFormRepeater repeat-section" id="test" data-field-id="test_field_id" data-items-index-array="[1]">    <!-- Form repeater-->
+                    <div class="repeat-items">
+                        <div class="repeat-item" data-field-index="1">
+                            <br>
 
-        <!-- Form -->
+                    <label for="sub-1" class="form-label">Choose subject 1</label>
+                    <select id='subject-1' onchange="getSubject1(this)" class = 'form-control subjects' placeholder="Choose subject">
+                        <option>Choose Subject</option>
+                    </select>
+                  
+                    <div class="row">
+                    <div class="col-sm-7 col-md-7 col-lg-4 offset-lg-4">
+                    <label for="">Teacher Preference (upto 4)</label>
+
+            
+                    <select id="s-1-pref-1" class="form-control preference-s-1">
+                        <option>Choose first preference</option>
+                    </select>
+                    <select id="s-1-pref-2" class="form-control preference-s-1">
+                        <option>Choose second preference</option>
+                    </select>
+                    <select id="s-1-pref-3" class="form-control preference-s-1">
+                        <option>Choose third preference</option>
+                    </select>
+                    <select id="s-1-pref-4" class="form-control preference-s-1">
+                        <option>Choose fourth preference</option>
+                    </select>
+                   
+                    </div>
+                    </div>
+
+
+
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+        
+
+        <!-- Form
         <div class="col-7 contaier-fluid" style="background-color: aliceblue; border-radius: 20px;"> 
            <br>
             <form>
@@ -252,9 +310,16 @@
 
                 </div>
               </form>
-        </div>
-    </div>
-    
+        </div> -->
+  
+        <br>
+                
+        <a href="page-3.html"><button type="submit" class="btn btn-primary">Submit</button></a>
+
+  </form>
+
+  <script src="assets/js/page-2.js"></script>
+
 </body>
 </html>
 
