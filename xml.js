@@ -90,8 +90,10 @@ function populateDropdown() {
                 data[i].CODE +
                 ' : '+
                 data[i].TITLE +
+                // " type : " +data[i].TYPE +
                 "; Credits :"+
                 data[i].CREDITS+
+                
                 "</option>")}
             }
             console.log('DONE!')
@@ -116,6 +118,7 @@ function getSubject1(selectObject) {
     console.log(subjectcode)
     var dropdown = $('.preference-s-1')
     dropdown.empty()
+    document.getElementById('type-1').innerHTML = ''
     $('.preference-s-1').append('<option> Choose teacher preference</option>')
     
     
@@ -142,7 +145,10 @@ function getSubject1(selectObject) {
                         ":"+data[i].FACULTY+
                         
                         "</option>")}
-                    }var xh1 = new XMLHttpRequest();
+                        
+                    }
+                    document.getElementById('type-1').innerHTML +='Theory'
+                    var xh1 = new XMLHttpRequest();
                         
                     xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
                     console.log("https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"")
@@ -152,9 +158,14 @@ function getSubject1(selectObject) {
                     xh1.send()
                     xh1.onload = function () {
                         var labs = JSON.parse(this.response)
-                        console.log('lab length:' + labs.length)
-                        credits += labs[0].CREDITS
-                        console.log(' after lab credits ' + credits)
+                        if(labs){
+                            console.log('lab length:' + labs.length)
+                            credits += labs[0].CREDITS
+                            console.log(' after lab credits ' + credits)
+                            document.getElementById('type-1').innerHTML += ' + Lab'
+
+                        }
+                        
                     }
                     var xh2 = new XMLHttpRequest();
                     
@@ -166,9 +177,13 @@ function getSubject1(selectObject) {
                     xh2.send()
                     xh2.onload = function () {
                         var projects = JSON.parse(this.response)
-                        console.log('lab length:' + projects.length)
+                        if(projects){
+                        console.log('project length:' + projects.length)
                         credits += projects[0].CREDITS
                         console.log('after project credits ' + credits)
+                        document.getElementById('type-1').innerHTML+=' + Project'
+                        
+                        }
                     }
                     
                     
@@ -186,6 +201,7 @@ function getSubject1(selectObject) {
                         }
                         console.log('DONE!')
                     }
+                    document
         
                 }
                 else if(slot==="evening"){
@@ -199,6 +215,7 @@ function getSubject1(selectObject) {
                         
                         "</option>")}
                     }
+                    document.getElementById('type-1').innerHTML +='Theory'
                         var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -209,9 +226,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -223,9 +245,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                         console.log('DONE!')
                     if($('.preference-s-1').children('option').length === 4){
@@ -290,6 +316,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -300,9 +327,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -314,9 +346,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-2').children('option').length === 4){
@@ -341,6 +377,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -351,9 +388,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -365,9 +407,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-2').children('option').length === 4){
@@ -427,6 +473,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -437,9 +484,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -451,9 +503,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-3').children('option').length === 4){
@@ -477,7 +533,9 @@ function getSubject1(selectObject) {
                     ":"+data[i].FACULTY+
                     
                     "</option>")}
-                }var xh1 = new XMLHttpRequest();
+                }
+                document.getElementById('type-1').innerHTML +='Theory'
+                var xh1 = new XMLHttpRequest();
                         
                 xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
                 console.log("https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"")
@@ -487,9 +545,14 @@ function getSubject1(selectObject) {
                 xh1.send()
                 xh1.onload = function () {
                     var labs = JSON.parse(this.response)
-                    console.log('lab length:' + labs.length)
-                    credits += labs[0].CREDITS
-                    console.log(' after lab credits ' + credits)
+                    if(labs){
+                        console.log('lab length:' + labs.length)
+                        credits += labs[0].CREDITS
+                        console.log(' after lab credits ' + credits)
+                        document.getElementById('type-1').innerHTML += ' + Lab'
+
+                    }
+                    
                 }
                 var xh2 = new XMLHttpRequest();
                 
@@ -501,9 +564,13 @@ function getSubject1(selectObject) {
                 xh2.send()
                 xh2.onload = function () {
                     var projects = JSON.parse(this.response)
-                    console.log('lab length:' + projects.length)
+                    if(projects){
+                    console.log('project length:' + projects.length)
                     credits += projects[0].CREDITS
                     console.log('after project credits ' + credits)
+                    document.getElementById('type-1').innerHTML+=' + Project'
+                    
+                    }
                 }
                 console.log('DONE!')
                 if($('.preference-s-3').children('option').length === 4){
@@ -562,6 +629,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -572,9 +640,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -586,9 +659,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-4').children('option').length === 4){
@@ -613,6 +690,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -623,9 +701,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -637,9 +720,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-4').children('option').length === 4){
@@ -698,6 +785,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -708,9 +796,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -722,9 +815,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-5').children('option').length === 4){
@@ -749,6 +846,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -759,9 +857,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -773,9 +876,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-5').children('option').length === 4){
@@ -834,6 +941,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -844,9 +952,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -858,9 +971,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-6').children('option').length === 4){
@@ -885,6 +1002,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -895,9 +1013,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -909,9 +1032,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-6').children('option').length === 4){
@@ -971,6 +1098,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -981,9 +1109,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -995,9 +1128,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-7').children('option').length === 4){
@@ -1022,6 +1159,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
+                document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -1032,9 +1170,14 @@ function getSubject1(selectObject) {
                         xh1.send()
                         xh1.onload = function () {
                             var labs = JSON.parse(this.response)
-                            console.log('lab length:' + labs.length)
-                            credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
+                            if(labs){
+                                console.log('lab length:' + labs.length)
+                                credits += labs[0].CREDITS
+                                console.log(' after lab credits ' + credits)
+                                document.getElementById('type-1').innerHTML += ' + Lab'
+    
+                            }
+                            
                         }
                         var xh2 = new XMLHttpRequest();
                         
@@ -1046,9 +1189,13 @@ function getSubject1(selectObject) {
                         xh2.send()
                         xh2.onload = function () {
                             var projects = JSON.parse(this.response)
-                            console.log('lab length:' + projects.length)
+                            if(projects){
+                            console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-1').innerHTML+=' + Project'
+                            
+                            }
                         }
                 console.log('DONE!')
                 if($('.preference-s-7').children('option').length === 4){
