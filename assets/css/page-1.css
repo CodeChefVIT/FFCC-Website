@@ -177,7 +177,7 @@ input[type="radio"] {  -webkit-appearance: none;}      /*Hide the circle of radi
     width: 100%;
 }
 
-.card {margin-top: 15px;}
+.card {margin: 15px;}
 
 .radio-btn {
     width: 250px;
