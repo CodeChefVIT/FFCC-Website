@@ -55,13 +55,14 @@ function addInput(divName){
      }
 }
 
-function removeInput(){
+function removeInput(divName){
     if (counter == 2)  {
          alert("You have reached the limit of removing " + counter + " inputs");
     }
     else {
-        var myobj = document.getElementById('subject-'+ counter);
-        myobj.parentNode.remove(myobj);
+        var myobj = document.getElementById(divName);
+        console.log(myobj.lastChild);
+       myobj.lastChild.remove();
         counter--;
     }
 }
