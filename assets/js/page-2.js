@@ -16,34 +16,27 @@ function addDropdowns() {
 var counter = 2;
 var limit = 8;
 
-function addInput(divName) {
+function addInput() {
   if (counter == limit) {
     alert("You have reached the limit of adding " + counter + " inputs");
   } else {
-    console.log(document.getElementById("subject-" + counter));
+    console.log(counter);
     document.getElementById("subject-" + counter).classList.remove("form-hide");
     document.getElementById("subject-" + counter).classList.add("form-show");
 
-    document.getElementById("add-" + (counter - 1)).classList.add("form-hide");
-    document
-      .getElementById("add-" + (counter - 1))
-      .classList.remove("form-show");
-    document
-      .getElementById("remove-" + (counter - 1))
-      .classList.add("form-hide");
-    document
-      .getElementById("remove-" + (counter - 1))
-      .classList.remove("form-show");
+    document.getElementById("add-" + (counter - 1)).style.display = "none";
+    document.getElementById("remove-" + (counter - 1)).style.display = "none";
 
-    document.getElementById("add-" + counter).classList.add("form-show");
-    document.getElementById("add-" + counter).classList.remove("form-hide");
-    document.getElementById("remove-" + counter).classList.add("form-show");
-    document.getElementById("remove-" + counter).classList.remove("form-hide");
+    document.getElementById("add-" + counter).style.display = "inline-block";
+    document.getElementById("remove-" + counter).style.display = "inline-block";
+
+    // list
+    document.getElementById("c" + counter).style.display = "inline";
     counter++;
   }
 }
 
-function removeInput(divName) {
+function removeInput() {
   if (counter <= 2) {
     alert("You have reached the remove limit");
   } else {
@@ -52,15 +45,9 @@ function removeInput(divName) {
     document.getElementById("subject-" + counter).classList.add("form-hide");
     document.getElementById("sub-" + counter).selectedIndex = 0;
 
-    document.getElementById("add-" + (counter - 1)).classList.add("form-show");
-    document
-      .getElementById("add-" + (counter - 1))
-      .classList.remove("form-hide");
-    document
-      .getElementById("remove-" + (counter - 1))
-      .classList.add("form-show");
-    document
-      .getElementById("remove-" + (counter - 1))
-      .classList.remove("form-hide");
+    document.getElementById("c" + counter).style.display = "none";
+
+    document.getElementById("add-" + (counter - 1)).style.display = "inline-block";
+    document.getElementById("remove-" + (counter - 1)).style.display = "inline-block";
   }
 }
