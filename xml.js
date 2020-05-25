@@ -163,14 +163,13 @@ function getSubject1(selectObject) {
                         if(labs){
                             console.log('lab length:' + labs.length)
                             credits += labs[0].CREDITS
-                            max_sub_cred = credits;
+                            max_sub_cred += credits;
                             console.log(' after lab credits' + max_sub_cred)
 
                             
-                            if(document.getElementById('type-1').innerHTML === null)
-                                 document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)
-                            document.getElementById('type-1').innerHTML = '<span class="section-1"> Subject Credits:'+credits+'</span>'
-                            credits = 0;
+                            document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
+                            
+                            
 
                         }
                         
@@ -188,12 +187,13 @@ function getSubject1(selectObject) {
                         if(projects){
                         console.log('project length:' + projects.length)
                         credits += projects[0].CREDITS;
-                        //max_sub_cred === credits;
+                        max_sub_cred += credits;
                         console.log('after project credits ' + credits)
-
-                        if(document.getElementById('type-1').innerHTML !== null){
-                             document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
-                        document.getElementById('type-1').innerHTML+='<span class = "creds"> Subject Credits:'+credits+'</span>'
+                        document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
+                        credits = 0;
+                        // if(document.getElementById('type-1').innerHTML !== null){
+                        //      document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
+                        // document.getElementById('type-1').innerHTML+='<span class = "creds"> Subject Credits:'+credits+'</span>'
                         
                         }
                     }
@@ -213,7 +213,7 @@ function getSubject1(selectObject) {
                         }
                         console.log('DONE!')
                     }
-                    document
+                    
         
                 }
                 else if(slot==="evening"){
@@ -241,13 +241,16 @@ function getSubject1(selectObject) {
                             if(labs){
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
-                             //   max_sub_cred += credits;
+                                max_sub_cred += credits;
                                 console.log(' after lab credits ' + credits)
-                                // document.getElementById('type-1').innerHTML += ' + Lab'
+                                document.getElementById('type-1').innerHTML = '<span class = "creds"> Subject Credits:'+credits+'</span>';
+
+                                
     
                             }
                             
                         }
+
                         var xh2 = new XMLHttpRequest();
                         
                         xh2.open("GET", "https://ffcc-website.herokuapp.com/time/checkProject/"+subjectcode+"", true)
@@ -261,12 +264,14 @@ function getSubject1(selectObject) {
                             if(projects){
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
-                            //max_sub_cred === credits;
-                            console.log('after project credits ' + credits)
-                            // document.getElementById('type-1').innerHTML+=' + Project'
+                            max_sub_cred += credits;
+                            console.log('after project credits ' + max_sub_cred)
+                            
+                             
                             
                             }
                         }
+                       
                         console.log('DONE!')
                     if($('.preference-s-1').children('option').length === 4){
                         for(i=0;i<data.length;i++){
@@ -279,6 +284,7 @@ function getSubject1(selectObject) {
                             
                             "</option>")}
                         }
+                        
                         console.log('DONE!')
                         
                     }
@@ -291,9 +297,16 @@ function getSubject1(selectObject) {
                         console.log('none')
                     }
                 }
+                
             }
-        }  
-  console.log(max_sub_cred+' is the total credit of subject');
+
+            console.log(max_sub_cred+' is the total credit of subject');
+        }   
+         
+        
+  
+
+
 
   function getSubject2(selectObject) {
     var slot = getUrlVars()['slot']
@@ -345,6 +358,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
+                                 document.getElementById('type-2').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                                 // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
@@ -364,10 +378,12 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-2').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                             // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
+                        
                 console.log('DONE!')
                 if($('.preference-s-2').children('option').length === 4){
                     for(i=0;i<data.length;i++){
@@ -405,12 +421,17 @@ function getSubject1(selectObject) {
                             if(labs){
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
-                                console.log(' after lab credits ' + credits)
-                                // document.getElementById('type-1').innerHTML += ' + Lab'
+                                
+                                max_sub_cred = credits;
+                                console.log(' after lab credits ' + max_sub_cred)
+                                
     
                             }
                             
                         }
+                        document.getElementById('type-2').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
+
+                        
                         var xh2 = new XMLHttpRequest();
                         
                         xh2.open("GET", "https://ffcc-website.herokuapp.com/time/checkProject/"+subjectcode+"", true)
@@ -448,8 +469,9 @@ function getSubject1(selectObject) {
                 
     
             }
-             
+            // document.getElementById('type-2').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
         }  
+        
   }
 
   function getSubject3(selectObject) {
@@ -502,6 +524,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
+                                document.getElementById('type-3').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                                 // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
@@ -521,6 +544,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-3').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                             // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
@@ -658,6 +682,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
+                                 document.getElementById('type-4').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                                 // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
@@ -677,6 +702,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                             document.getElementById('type-4').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                             // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
@@ -814,6 +840,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
+                                document.getElementById('type-5').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                                 // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
@@ -832,6 +859,7 @@ function getSubject1(selectObject) {
                             if(projects){
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
+                            document.getElementById('type-5').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                             console.log('after project credits ' + credits)
                             // document.getElementById('type-1').innerHTML+=' + Project'
                             
@@ -970,6 +998,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
+                                document.getElementById('type-6').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                                 // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
@@ -989,6 +1018,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-6').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                             // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
@@ -1127,6 +1157,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
+                                document.getElementById('type-7').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                                 // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
@@ -1146,6 +1177,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
+                            document.getElementById('type-7').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
                             // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
