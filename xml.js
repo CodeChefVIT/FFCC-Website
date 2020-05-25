@@ -29,6 +29,8 @@
 //             console.log("yes");
 //         }
 //     });
+var max_sub_cred = 0;
+
 
 var options = document.getElementsByName('options');
 console.log(options)
@@ -118,7 +120,7 @@ function getSubject1(selectObject) {
     console.log(subjectcode)
     var dropdown = $('.preference-s-1')
     dropdown.empty()
-    document.getElementById('type-1').innerHTML = ''
+    // document.getElementById('type-1').innerHTML = ''
     $('.preference-s-1').append('<option> Choose teacher preference</option>')
     
     
@@ -147,7 +149,7 @@ function getSubject1(selectObject) {
                         "</option>")}
                         
                     }
-                    document.getElementById('type-1').innerHTML +='Theory'
+                    // document.getElementById('type-1').innerHTML +='Theory'
                     var xh1 = new XMLHttpRequest();
                         
                     xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -161,8 +163,14 @@ function getSubject1(selectObject) {
                         if(labs){
                             console.log('lab length:' + labs.length)
                             credits += labs[0].CREDITS
-                            console.log(' after lab credits ' + credits)
-                            document.getElementById('type-1').innerHTML += ' + Lab'
+                            max_sub_cred = credits;
+                            console.log(' after lab credits' + max_sub_cred)
+
+                            
+                            if(document.getElementById('type-1').innerHTML === null)
+                                 document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)
+                            document.getElementById('type-1').innerHTML = '<span class="section-1"> Subject Credits:'+credits+'</span>'
+                            credits = 0;
 
                         }
                         
@@ -179,9 +187,13 @@ function getSubject1(selectObject) {
                         var projects = JSON.parse(this.response)
                         if(projects){
                         console.log('project length:' + projects.length)
-                        credits += projects[0].CREDITS
+                        credits += projects[0].CREDITS;
+                        //max_sub_cred === credits;
                         console.log('after project credits ' + credits)
-                        document.getElementById('type-1').innerHTML+=' + Project'
+
+                        if(document.getElementById('type-1').innerHTML !== null){
+                             document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
+                        document.getElementById('type-1').innerHTML+='<span class = "creds"> Subject Credits:'+credits+'</span>'
                         
                         }
                     }
@@ -215,7 +227,7 @@ function getSubject1(selectObject) {
                         
                         "</option>")}
                     }
-                    document.getElementById('type-1').innerHTML +='Theory'
+                    // document.getElementById('type-1').innerHTML +='Theory'
                         var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -229,8 +241,9 @@ function getSubject1(selectObject) {
                             if(labs){
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
+                             //   max_sub_cred += credits;
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -248,8 +261,9 @@ function getSubject1(selectObject) {
                             if(projects){
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
+                            //max_sub_cred === credits;
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -269,7 +283,7 @@ function getSubject1(selectObject) {
                         
                     }
                     // console.log($('.preference-s-1').children('option').length)
-                    // console.log( 'credits ' + credits)
+                     //console.log( 'credits ' + credits)
         
                     }
                     
@@ -279,7 +293,7 @@ function getSubject1(selectObject) {
                 }
             }
         }  
-  
+  console.log(max_sub_cred+' is the total credit of subject');
 
   function getSubject2(selectObject) {
     var slot = getUrlVars()['slot']
@@ -316,7 +330,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -331,7 +345,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -350,7 +364,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -377,7 +391,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -392,7 +406,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -411,7 +425,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -473,7 +487,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -488,7 +502,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -507,7 +521,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -534,7 +548,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                 xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -549,7 +563,7 @@ function getSubject1(selectObject) {
                         console.log('lab length:' + labs.length)
                         credits += labs[0].CREDITS
                         console.log(' after lab credits ' + credits)
-                        document.getElementById('type-1').innerHTML += ' + Lab'
+                        // document.getElementById('type-1').innerHTML += ' + Lab'
 
                     }
                     
@@ -568,7 +582,7 @@ function getSubject1(selectObject) {
                     console.log('project length:' + projects.length)
                     credits += projects[0].CREDITS
                     console.log('after project credits ' + credits)
-                    document.getElementById('type-1').innerHTML+=' + Project'
+                    // document.getElementById('type-1').innerHTML+=' + Project'
                     
                     }
                 }
@@ -629,7 +643,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -644,7 +658,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -663,7 +677,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -690,7 +704,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -705,7 +719,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -724,7 +738,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -785,7 +799,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -800,7 +814,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -819,7 +833,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -846,7 +860,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -861,7 +875,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -880,7 +894,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -941,7 +955,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -956,7 +970,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -975,7 +989,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -1002,7 +1016,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -1017,7 +1031,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -1036,7 +1050,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -1098,7 +1112,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -1113,7 +1127,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -1132,7 +1146,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
@@ -1159,7 +1173,7 @@ function getSubject1(selectObject) {
                     
                     "</option>")}
                 }
-                document.getElementById('type-1').innerHTML +='Theory'
+                // document.getElementById('type-1').innerHTML +='Theory'
                 var xh1 = new XMLHttpRequest();
                         
                         xh1.open("GET", "https://ffcc-website.herokuapp.com/time/checkLab/"+subjectcode+"", true)
@@ -1174,7 +1188,7 @@ function getSubject1(selectObject) {
                                 console.log('lab length:' + labs.length)
                                 credits += labs[0].CREDITS
                                 console.log(' after lab credits ' + credits)
-                                document.getElementById('type-1').innerHTML += ' + Lab'
+                                // document.getElementById('type-1').innerHTML += ' + Lab'
     
                             }
                             
@@ -1193,7 +1207,7 @@ function getSubject1(selectObject) {
                             console.log('project length:' + projects.length)
                             credits += projects[0].CREDITS
                             console.log('after project credits ' + credits)
-                            document.getElementById('type-1').innerHTML+=' + Project'
+                            // document.getElementById('type-1').innerHTML+=' + Project'
                             
                             }
                         }
