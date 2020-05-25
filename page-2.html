@@ -117,6 +117,7 @@
                         <option>Choose Subject 1</option>
                     </select>
                 </div>
+                <span id='type-1'></span>
                 <br><br>
 
                 <div class="row">
@@ -159,7 +160,7 @@
                     </select>
                 </div>
                 <br>
-
+                <span id='type-2'></span>
                 <div class="row">
 
 
@@ -199,6 +200,7 @@
                     </select>
                 </div>
                 <br>
+                <span id='type-3'></span>
 
                 <div class="row">
 
@@ -239,7 +241,7 @@
                     </select>
                 </div>
                 <br>
-
+                <span id='type-4'></span>
                 <div class="row">
 
 
@@ -279,7 +281,7 @@
                     </select>
                 </div>
                 <br>
-
+                <span id='type-5'></span>
                 <div class="row">
 
 
@@ -320,7 +322,7 @@
                     </select>
                 </div>
                 <br>
-
+                <span id='type-6'></span>
                 <div class="row">
 
 
@@ -360,6 +362,7 @@
                     </select>
                 </div>
                 <br>
+                <span id='type-7'></span>
 
                 <div class="row">
 
@@ -394,10 +397,17 @@
     </form>
 
     <br>
+    <script src="xml.js"></script>
+<script src="assets/js/page-2.js"></script>
 
 
 </body>
-<script src="assets/js/page-2.js"></script>
-<script src="xml.js"></script>
-
 </html>
+
+
+<!-- COPY THIS IN XML -->
+<!-- 
+if(document.getElementById('type-1').innerHTML !== null){
+    document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
+document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
+ -->
