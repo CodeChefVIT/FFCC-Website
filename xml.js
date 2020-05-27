@@ -575,6 +575,10 @@ function getSubject1(selectObject) {
 
                 setTimeout(function(){
                     document.getElementById('type-3').innerHTML = credits
+                    net_credit += credits
+                    console.log('NET CREDIT '+net_credit)
+                    document.getElementById('credit-bar').style = "width:0;"
+                    document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
                 },2000)
 
 
@@ -738,6 +742,10 @@ function getSubject1(selectObject) {
 
                 setTimeout(function(){
                     document.getElementById('type-4').innerHTML = credits
+                    net_credit += credits
+                    console.log('NET CREDIT '+net_credit)
+                    document.getElementById('credit-bar').style = "width:0;"
+                    document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
                 },2000)
 
 
@@ -901,6 +909,10 @@ function getSubject1(selectObject) {
 
                 setTimeout(function(){
                     document.getElementById('type-5').innerHTML = credits
+                    net_credit += credits
+                    console.log('NET CREDIT '+net_credit)
+                    document.getElementById('credit-bar').style = "width:0;"
+                    document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
                 },2000)
 
 
@@ -1064,6 +1076,10 @@ function getSubject1(selectObject) {
 
                 setTimeout(function(){
                     document.getElementById('type-6').innerHTML = credits
+                    net_credit += credits
+                    console.log('NET CREDIT '+net_credit)
+                    document.getElementById('credit-bar').style = "width:0;"
+                    document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
                 },2000)
 
 
@@ -1229,6 +1245,10 @@ function getSubject1(selectObject) {
 
                 setTimeout(function(){
                     document.getElementById('type-7').innerHTML = credits
+                    net_credit += credits
+                    console.log('NET CREDIT '+net_credit)
+                    document.getElementById('credit-bar').style = "width:0;"
+                    document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
               
                 },2000)
 
