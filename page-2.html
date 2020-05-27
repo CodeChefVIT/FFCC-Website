@@ -43,7 +43,7 @@
 </head>
 
 <body onload="populateDropdown()" style = "background-color: rgb(233,236,239);">
-
+   
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <!-- FFCC LOGO -->
@@ -75,7 +75,28 @@
             </ul>
         </div>
     </nav>
-    <br><br>
+
+    <div class="cred-count-box sticky slot-title"><br>Total Credits
+        <div class="progress cred-count-bar">
+            <div id = "credit-bar" class="progress-bar" role="progressbar" style="width: 0.00%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+  
+            <!-- Subject Navigator -->
+            <br>
+            
+            <div class = "container d-flex justify-content-center section1 sticky">
+                <a href="#subject-1" class="circle">1</a>
+                <a href="#subject-2" id="c2" class = "circle" style="display: none;">2</a>
+                <a href="#subject-3" id="c3" class = "circle" style="display: none;">3</a>
+                <a href="#subject-4" id="c4" class = "circle" style="display: none;">4</a>
+                <a href="#subject-5" id="c5" class = "circle" style="display: none;">5</a>
+                <a href="#subject-6" id="c6" class = "circle" style="display: none;">6</a>
+                <a href="#subject-7" id="c7" class = "circle" style="display: none;">7</a>    
+            </div>
+            <h6 class="slot-title">SUBJECT</h6>
+    </div> 
+
+    <br>
 
     <!-- Section divider 1 -->
     <div class = "container d-flex justify-content-center">
@@ -91,17 +112,7 @@
     <h1 class="slot-title"><i class="fa fa-book"></i>  Enter Your Subjects</h1>
     <hr><br>
 
-    <!-- Subject Navigator -->
-    <h6 class="slot-title">Navigate Between Subjects</h6>
-    <div class = "container d-flex justify-content-center section1 sticky">
-        <a href="#subject-1" class="circle">1</a>
-        <a href="#subject-2" id="c2" class = "circle" style="display: none;">2</a>
-        <a href="#subject-3" id="c3" class = "circle" style="display: none;">3</a>
-        <a href="#subject-4" id="c4" class = "circle" style="display: none;">4</a>
-        <a href="#subject-5" id="c5" class = "circle" style="display: none;">5</a>
-        <a href="#subject-6" id="c6" class = "circle" style="display: none;">6</a>
-        <a href="#subject-7" id="c7" class = "circle" style="display: none;">7</a>    
-    </div>
+    
 
 
     <form id="dynamicInput" class="container  ffcc-form">
@@ -411,3 +422,18 @@ if(document.getElementById('type-1').innerHTML !== null){
     document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
 document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
  -->
+
+
+
+<!-- COPY THIS IN XML -->
+<!-- 
+if(document.getElementById('type-1').innerHTML !== ''){
+    document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
+document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
+ -->
+
+  <!-- Credits Counter -->
+    <!-- <div class="cred-count-box sticky slot-title"><br>Total Credits
+        <div class="progress cred-count-bar">
+            <div class="progress-bar" role="progressbar" style="width: 1.00%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div> -->
