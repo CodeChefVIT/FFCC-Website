@@ -1,8 +1,9 @@
-body {background-color: rgb(90, 38, 38);}
+body {background-color: rgba(90, 38, 38, 0);}
 
 ul {
     list-style-type: none;
 }
+
 
 /* Navbar */
 .nav {
@@ -115,8 +116,33 @@ ul {
     position: relative;
   }
 }
+/* Credit Counter */
+
+.cred-count-box {
+  background-color: #343a40;
+  color: whitesmoke;
+  margin-top: 0;
+  width: 100%;
+  margin: auto;
+  margin-top:0;
+  text-align: center;
+  
+}
+
+.cred-count-bar {
+  width: 50%;
+  margin: auto;
+}
+  
 
 /* Section Divider 1 */
+#contain {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
 .circle{
     border-style: none;
     border-radius: 100%;
@@ -168,7 +194,7 @@ ul {
   }
 
 .section1 {
-    background-color: rgb(233,236,239);
+    background-color: #343a40;
 }
 
 /* Form Repeater */
@@ -214,7 +240,7 @@ ul {
 .slot-title, .slot-title2, .slot-title3 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: rgb(95, 95, 95);
+    color: rgb(184, 179, 179);
 }
 
 hr {width: 65%;}
