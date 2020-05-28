@@ -174,10 +174,10 @@ ul {
 .circle3 {
   border-style: none;
   border-radius: 100%;
-  padding: 22px 35px;
+  padding: 22px 31px;
   color: white;
   font-family: "Ubuntu", sans-serif;
-  font-size: 30px;
+  font-size: 21px;
 }
 
 .circle1 {
@@ -194,7 +194,7 @@ ul {
 .line {
   border-bottom: solid 4px rgb(231, 226, 226);
   height: 0;
-  width: 400px;
+  width: 350px;
   position: relative;
   top: 43px;
   margin: 0 6px;
@@ -214,6 +214,7 @@ ul {
 
 .test {background-color: rgb(233,236,239);
   box-shadow: 0 0 15px 0px #e7e7e7;
+  padding: 0;
 }
 /* Form Repeater */
 
@@ -264,6 +265,7 @@ ul {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: rgb(119, 119, 119);
+  font-size: 25px;
 }
 
 hr {width: 65%;}
