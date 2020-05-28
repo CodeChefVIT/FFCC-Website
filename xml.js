@@ -41,7 +41,7 @@ var limit = 8;
 
 function addInput() {
   if (counter == limit) {
-    alert("You have reached the limit of adding " + counter + " inputs");
+    alert("You have reached the limit of adding " + counter-1 + " inputs");
   } else {
     console.log(counter);
     document.getElementById("subject-" + counter).classList.remove("form-hide");
@@ -79,7 +79,16 @@ function removeInput() {
     document.getElementById("c" + counter).style.display = "none";
 
     document.getElementById("add-" + (counter - 1)).style.display = "inline-block";
-    document.getElementById("remove-" + (counter - 1)).style.display = "inline-block";
+    document.getElementById("remove-" + (counter - 1)).style.display = "inline-block";  
+    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+
+    if(net_credit >= 16 && net_credit <=27) {
+        document.getElementById('credit-bar').classList.add("bg-success")
+        document.getElementById('credit-bar').classList.remove("bg-danger")
+    } else {
+        document.getElementById('credit-bar').classList.add("bg-danger")
+        document.getElementById('credit-bar').classList.remove("bg-success")
+    }
   }
 }
 
@@ -128,6 +137,7 @@ function populateDropdown() {
 var net_credit = 0;
 
 function getSubject1(selectObject) {
+    net_credit -= document.getElementById('type-1').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -229,6 +239,15 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
                 },2000)
 
                 //Raj testing
@@ -313,10 +332,19 @@ function getSubject1(selectObject) {
                     }
                 }
             }
+            document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+            if(net_credit >= 16 && net_credit <=27) {
+                document.getElementById('credit-bar').classList.add("bg-success")
+                document.getElementById('credit-bar').classList.remove("bg-danger")
+            } else {
+                document.getElementById('credit-bar').classList.add("bg-danger")
+                document.getElementById('credit-bar').classList.remove("bg-success")
+            }
         }  
   
 
   function getSubject2(selectObject) {
+    net_credit -= document.getElementById('type-2').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -409,6 +437,15 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+                    
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
                 },2000)
 
 
@@ -484,9 +521,13 @@ function getSubject1(selectObject) {
             }
              
         }  
+
+
+       
   }
 
   function getSubject3(selectObject) {
+    net_credit -= document.getElementById('type-3').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -579,6 +620,14 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
                 },2000)
 
 
@@ -654,6 +703,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject4(selectObject) {
+    net_credit -= document.getElementById('type-4').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -746,6 +796,14 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
                 },2000)
 
 
@@ -821,6 +879,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject5(selectObject) {
+    net_credit -= document.getElementById('type-5').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value; 
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -913,6 +972,14 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
                 },2000)
 
 
@@ -988,6 +1055,7 @@ function getSubject1(selectObject) {
   }
 
   function getSubject6(selectObject) {
+    net_credit -= document.getElementById('type-6').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value;
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -1080,6 +1148,14 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
                 },2000)
 
 
@@ -1157,6 +1233,7 @@ function getSubject1(selectObject) {
 
 
   function getSubject7(selectObject) {
+    net_credit -= document.getElementById('type-7').innerHTML
     var slot = getUrlVars()['slot']
     var value = selectObject.value;  
     var credits =  parseInt(value.substr(value.length -1),10) 
@@ -1249,6 +1326,14 @@ function getSubject1(selectObject) {
                     console.log('NET CREDIT '+net_credit)
                     document.getElementById('credit-bar').style = "width:0;"
                     document.getElementById('credit-bar').style = "width:"+(100/27)*net_credit+"%;"
+                    document.getElementById('tot-cred').innerHTML = "Total Credits: "+net_credit
+                    if(net_credit >= 16 && net_credit <=27) {
+                        document.getElementById('credit-bar').classList.add("bg-success")
+                        document.getElementById('credit-bar').classList.remove("bg-danger")
+                    } else {
+                        document.getElementById('credit-bar').classList.add("bg-danger")
+                        document.getElementById('credit-bar').classList.remove("bg-success")
+                    }
               
                 },2000)
 
