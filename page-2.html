@@ -42,8 +42,8 @@
     <title>FFCC</title>
 </head>
 
-<body onload="populateDropdown()" style = "background-color: rgb(233,236,239);">
-   
+<!-- <body onload="populateDropdown()" style = "background-color: rgb(233,236,239);"> -->
+    <body onload="populateDropdown()" style = "background-color: #343a40;">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <!-- FFCC LOGO -->
@@ -76,7 +76,7 @@
         </div>
     </nav>
 
-    <div class="cred-count-box sticky slot-title"><br>Total Credits
+    <div id="slot-title" class="cred-count-box sticky"><br><h6 id = "tot-cred">Total Credits</h6>
         <div class="progress cred-count-bar">
             <div id = "credit-bar" class="progress-bar" role="progressbar" style="width: 0.00%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
@@ -93,10 +93,11 @@
                 <a href="#subject-6" id="c6" class = "circle" style="display: none;">6</a>
                 <a href="#subject-7" id="c7" class = "circle" style="display: none;">7</a>    
             </div>
-            <h6 class="slot-title">SUBJECT</h6>
+            <h6 style = "font-size: smaller;">SUBJECT</h6>
     </div> 
 
-    <br>
+    <div class="container test">
+    <br><br><br>
 
     <!-- Section divider 1 -->
     <div class = "container d-flex justify-content-center">
@@ -109,7 +110,7 @@
 
     <br><br>
 
-    <h1 class="slot-title"><i class="fa fa-book"></i>  Enter Your Subjects</h1>
+    <h1 class="slot-title2"><i class="fa fa-book"></i>  Enter Your Subjects</h1>
     <hr><br>
 
     
@@ -128,7 +129,7 @@
                         <option>Choose Subject 1</option>
                     </select>
                 </div>
-                <span id='type-1'></span>
+                <span class="cred">Credits: </span><span id='type-1'></span>
                 <br><br>
 
                 <div class="row">
@@ -170,8 +171,8 @@
                         <option>Choose Subject 2</option>
                     </select>
                 </div>
-                <br>
-                <span id='type-2'></span>
+                
+                <span class="cred">Credits: </span><span id='type-1'></span><span id='type-2'></span><br><br>
                 <div class="row">
 
 
@@ -207,11 +208,11 @@
                 <br><br>
                 <div class="input-group subject">
                     <select id='sub-3' onchange=getSubject3(this) class='form-control form-control-lg subjects' placeholder="Choose subject">
-                        <option>Choose Subject 3</option>
+                        <span class="cred">Credits: </span> <option>Choose Subject 3</option>
                     </select>
                 </div>
-                <br>
-                <span id='type-3'></span>
+                
+                <span class="cred">Credits: </span><span id='type-1'></span><span id='type-3'></span><br><br>
 
                 <div class="row">
 
@@ -251,8 +252,8 @@
                         <option>Choose Subject 4</option>
                     </select>
                 </div>
-                <br>
-                <span id='type-4'></span>
+            
+                <span class="cred">Credits: </span><span id='type-1'></span><span id='type-4'></span><br><br>
                 <div class="row">
 
 
@@ -291,8 +292,8 @@
                         <option>Choose Subject 5</option>
                     </select>
                 </div>
-                <br>
-                <span id='type-5'></span>
+                
+                <span class="cred">Credits: </span><span id='type-1'></span><span id='type-5'></span><br><br>
                 <div class="row">
 
 
@@ -332,8 +333,8 @@
                         <option>Choose Subject 6</option>
                     </select>
                 </div>
-                <br>
-                <span id='type-6'></span>
+                
+                <span class="cred">Credits: </span><span id='type-1'></span><span id='type-6'></span><br><br>
                 <div class="row">
 
 
@@ -372,8 +373,7 @@
                         <option>Choose Subject 7</option>
                     </select>
                 </div>
-                <br>
-                <span id='type-7'></span>
+                <span class="cred">Credits: </span><span id='type-1'></span><span id='type-7'></span><br><br>
 
                 <div class="row">
 
@@ -404,9 +404,10 @@
 
     
         <br><br>
-        <a href="page-3.html"><input type="submit"></a>
+       <a href = "page-3.html"><button type="submit" class="btn btn-outline-dark btn-lg">Submit</button></a>
     </form>
-
+    <br>
+    </div>
     <br>
     <script src="xml.js"></script>
 <script src="assets/js/page-2.js"></script>
@@ -414,26 +415,3 @@
 
 </body>
 </html>
-
-
-<!-- COPY THIS IN XML -->
-<!-- 
-if(document.getElementById('type-1').innerHTML !== null){
-    document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
-document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
- -->
-
-
-
-<!-- COPY THIS IN XML -->
-<!-- 
-if(document.getElementById('type-1').innerHTML !== ''){
-    document.getElementById('type-1').removeChild(document.getElementById('type-1').firstChild)}
-document.getElementById('type-1').innerHTML='<span class = "creds"> Subject Credits:'+credits+'</span>'
- -->
-
-  <!-- Credits Counter -->
-    <!-- <div class="cred-count-box sticky slot-title"><br>Total Credits
-        <div class="progress cred-count-bar">
-            <div class="progress-bar" role="progressbar" style="width: 1.00%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-        </div> -->
