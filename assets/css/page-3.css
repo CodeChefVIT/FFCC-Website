@@ -1,13 +1,150 @@
-.navbar{
-    
-    background-image: url(../img/assets/bg-1.jpg);
-    /* background-color: rgb(129, 204, 230); */
-    box-shadow: 5px 30px 50px rgb(170, 145, 145);
-  }
-  .navbar a{
-      color: black!important;
+body {background-color: #F5F5F5;}
+hr {width: 70%;}
+/* Navbar */
+.nav {
+    margin-right: 70px;
   }
   
+  .nav-item,
+  .navbar-brand {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .navbar-brand {
+    font-family: "Rubik", sans-serif;
+    font-size: 32px;
+    margin-left: 70px;
+    letter-spacing: 4px;
+  }
+  
+  .nav-link {
+    font-family: "Rubik", sans-serif;
+    color: rgb(182, 180, 180);
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 3px;
+  }
+  
+  .nav-link:hover {
+    color: rgb(241, 239, 239);
+    transition: 200ms;
+  }
+  
+  .disabled {
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .codechef {
+    width: 100px;
+    margin-left: 10px;
+    padding-left: 10px;
+    opacity: 0.5;
+  }
+  
+  .codechef:hover {
+    opacity: 1;
+    border: none;
+    transition: 200ms;
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      width: 550px;
+      margin: auto;
+      /* margin-left: 1000px; */
+    }
+  
+    .nav-item {
+      font-size: 20px;
+      margin-right: 0px;
+      padding-left: 31px;
+    }
+  
+    .navbar-brand {
+      margin-left: 20px;
+    }
+  
+    .nav-link {
+      font-family: "Rubik", sans-serif;
+      color: rgb(182, 180, 180);
+      letter-spacing: 2px;
+      padding-left: 0px;
+    }
+  
+    .disabled {
+      font-weight: 0;
+      font-size: 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .nav {
+      width: 190px;
+      margin-right: 0;
+    }
+  
+    .nav-item {
+      font-size: 20px;
+      margin-right: 0px;
+    }
+  
+    .navbar-brand {
+      font-family: "Rubik", sans-serif;
+      font-size: 32px;
+      margin-left: 20px;
+      letter-spacing: 4px;
+    }
+  
+    .nav-link {
+      font-family: "Rubik", sans-serif;
+      color: rgb(182, 180, 180);
+      letter-spacing: px;
+      padding-left: 0px;
+    }
+  
+    .codechef {
+      margin: 0;
+      position: relative;
+    }
+  }
+
+  /* Section Divider - 1 */
+  .circle1, .circle2, .circle3 {
+    border-style: none;
+    border-radius: 100%;
+    padding: 22px 35px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+}
+
+
+.circle2 {background-color: #E68383;}
+.circle1 {background-color: #E68383;}
+.circle3 {
+  background-color: #ABE08B;
+  box-shadow: 0 0 0 6px rgb(231, 226, 226);
+}
+
+.line {
+    border-bottom: solid 4px rgb(231, 226, 226);
+    height: 0;
+    width: 400px;
+    position: relative;
+    top: 43px;
+    margin: 0 6px;
+}
+
+.slot-title{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: rgb(95, 95, 95);
+}
+/* Table */
 
 .theory{
     background-color: rgb(204,204,255);
@@ -19,7 +156,9 @@
 .grey-box:hover{
     background-color: rgb(192, 192, 192);
 }
-
+#L:hover, #U:hover, #N:hover, #C:hover, #H:hover{
+  background-color: rgb(192, 192, 192);
+}
 .lab{
     background-color: rgb(153,204,255);
 }
@@ -31,9 +170,25 @@
     background-color: #ccff33;
 }
 
+tr {
+  text-align: center;
+}
+/* Contact us */
+#contact {
+  padding: 4%;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
 
+.social-icon {
+  width: 90px;
+  color: #212529;
+  transition: 500ms;
+}
 
-.jumbo-table{
-    text-align: center;
-    background-color: rgb(224, 224, 220);
+.social-icon:hover{
+  font-size: 60px;
+  transition: 300ms;
 }
