@@ -9,38 +9,76 @@
     <title>FFCC</title>
 
     <!-- CSS -->
-    <link href="../FFCC-Website/assets/css/page-3.css" rel="stylesheet">
+    <link href="assets/css/page-3.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- JS -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src = "xml.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+     
+     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://use.fontawesome.com/630e118e72.js"></script>
     
 </head>
 
 
-<body style="background-color: rgb(65, 64, 64);">
-  <nav class="navbar navbar-expand-md">
-            
-    <a class="navbar-brand" href="index.html">
-        <span>
+<body style="background-color: #F5F5F5; font-family: 'Montserrat';">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- FFCC LOGO -->
+    <span class="navbar-brand"> FFCC </span>
 
-            <span class="d-inline d-md-none" style="font-family: 'Lato', sans-serif;font-size: medium;">FULLY FLEXIBLE <br> CREDIT COMPANION(FFCC)</span> 
+    <!-- Toggler -->
+    <button class='navbar-toggler' type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <span class="d-none d-md-inline" style="font-family: 'Lato', sans-serif;">FULLY FLEXIBLE CREDIT COMPANION(FFCC)</span>
-        </span>
-    </a>
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item d-none d-sm-inline">
-            <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/cc logo black.png" width="100px"></a>
-        </li>
-        <li class="nav-item d-inline d-sm-none">
-            <a class="navbar-brand text-center" href="index.html"><img src="assets/img/assets/mascot.png"width="25px"></a>
-        </li>
-    </ul>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse navbar-md-expand div-nav" id="navbarToggler">
+        <ul class="nav ml-auto ">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+                <!--FAQ-->
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+                <!--Contact us-->
+            </li>
+
+            <li class="nav-item">
+                <a class="" href="#"><img class="codechef" src="assets/img/ccwhite.png"></a>
+                <!--Codechef LOGO-->
+            </li>
+        </ul>
+    </div>
 </nav>
-    <br>
-    <div class="table-responsive">
-    <table class="table table-bordered l-green-box">
+    <br><br>
+
+    <!-- Section divider 1 -->
+    <div class = "container d-flex justify-content-center section1">
+      <span class = "circle1">1</span> 
+      <span class = "line"></span> 
+      <span class = "circle2">2</span>
+      <span class = "line"></span>
+      <span class = "circle3">3</span>
+  </div>
+<br><br>
+<h1 class="slot-title">Generated Time Table</h1>
+<hr><br>
+
+
+    <!-- Table -->
+    <div class="table-responsive container table-sm">
+    <table class="table table-bordered l-green-box" style="font-size: smaller;">
         <thead>
           <tr class="theory">
             <th scope="col" class="grey-box">Theory Hours</th>
@@ -88,7 +126,7 @@
             <td>TB1/L4</td>
             <td>TG1/L5</td>
             <td>L6</td>
-            <td class="grey-box" style="border:none;">L</td>
+            <td class="grey-box" style="border:none;" id="L">L</td>
             <td>A2/L31</td>
             <td>F2/L32</td>
             <td>D2/L33</td>
@@ -104,7 +142,7 @@
             <td>TC1/L10</td>
             <td>TAA1/L11</td>
             <td>L12</td>
-            <td class="grey-box" style="border:none;">U</td>
+            <td class="grey-box" style="border:none;" id="U">U</td>
             <td>B2/L37</td>
             <td>G2/L38</td>
             <td>E2/L39</td>
@@ -120,7 +158,7 @@
             <td>V1/L16</td>
             <td>V2</td>
             <td></td>
-            <td class="grey-box" style="border:none;">N</td>
+            <td class="grey-box" style="border:none;" id="N">N</td>
             <td>C2/L43</td>
             <td>A2/L44</td>
             <td>F2/L45</td>
@@ -136,7 +174,7 @@
             <td>TE1/L22</td>
             <td>TCC1/L23</td>
             <td>L24</td>
-            <td class="grey-box" style="border:none;">C</td>
+            <td class="grey-box" style="border:none;" id="C">C</td>
             <td>D2/L49</td>
             <td>B2/L50</td>
             <td>G2/L51</td>
@@ -152,10 +190,10 @@
             <td>TF1/L28</td>
             <td>TD1/L29</td>
             <td>L30</td>
-            <td class="grey-box" style="border:none;">H</td>
+            <td class="grey-box" style="border:none;" id="H">H</td>
             <td>E2/L55</td>
             <td>C2/L56</td>
-            <td>TA2/L57/td>
+            <td>TA2/L57</td>
             <td>TF2/L58</td>
             <td>TDD2/L59</td>
             <td>V7/L60</td>
@@ -165,7 +203,7 @@
     </div>
 
     <br>
-    <div class="row">
+    <!-- <div class="row">
         <div class=" col-12 col-md-6 offset-3 jumbotron">
             <table class="table table-bordered jumbo-table">
                 <thead>
@@ -187,6 +225,53 @@
                 </tbody>
             </table>
         </div>
+    </div> -->
+    <hr><br>
+    <div class="container">
+      <table class="table table-dark table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+            <th>Credits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>###</td>
+            <td>A</td>
+            <td>Hemsworth</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>###</td>
+            <td>B</td>
+            <td>Wilson</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>###</td>
+            <td>C</td>
+            <td>Dooley</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td style="background-color: #f5f5f5"></td>
+            <td style="background-color: #f5f5f5"></td>
+            <td style="background-color: #f5f5f5"></td>
+            <td style="background-color: #cc6868">Total</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <footer id="contact" class="container">
+      <a href="https://www.facebook.com/codechefvit/"><i class="social-icon fa fa-facebook-f"></i></a>
+      <a href="https://twitter.com/codechefvit?lang=en"><i class="social-icon fa fa-twitter"></i></a>
+      <a href="https://www.instagram.com/codechefvit/?hl=en"><i class="social-icon fa fa-instagram"></i></a>
+      <a href="https://github.com/CodeChefVIT?language=java"><i class="social-icon fa fa-github"></i></a> <br>
+      <p style="font-size: 15px;">Powered By CodechefVIT</p>   
+  </footer>
 </body>
 </html>
