@@ -20,6 +20,11 @@ function hello(){
     console.log(window.location.href)
 }
 
+function hello_2(){
+    window.location.href ="page-3.html"
+    console.log(window.location.href)
+}
+
 function getUrlVars()
 {
     var vars = [], hash;
